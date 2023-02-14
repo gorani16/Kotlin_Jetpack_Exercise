@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="person"
             type="com.gorani.jetpack_exercise.Person" />
@@ -37,12 +38,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="다음 액티비티로 이동하기"
+            android:text="GO Next Activity"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/tv_dataBindingText"
             app:layout_constraintStart_toStartOf="@+id/tv_dataBindingText"
             app:layout_constraintTop_toBottomOf="@+id/tv_dataBindingText" />
+
+        <Button
+            android:id="@+id/btn_binding_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="GO Binding Activity"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/btn_next_activity"
+            app:layout_constraintStart_toStartOf="@+id/btn_next_activity"
+            app:layout_constraintTop_toBottomOf="@+id/btn_next_activity" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -53,7 +66,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_next_activity">
+            app:layout_constraintTop_toBottomOf="@+id/btn_binding_activity">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -74,19 +87,21 @@
                 tools:text="나이 : " />
 
             <TextView
+                text="@{person.age > 19 ? `청년입니다.` : `청소년입니다.`}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="30sp"
                 android:textStyle="bold"
-                text="@{person.age > 19 ? `청년입니다.` : `청소년입니다.`}"
                 tools:text="20세 이상은 청년" />
 
             <Button
-                android:onClick="@{() -> activity.plusAge()}"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="당신의 이름과 나이는?" />
+                android:onClick="@{() -> activity.plusAge()}"
+                android:text="What is your name, age?"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 

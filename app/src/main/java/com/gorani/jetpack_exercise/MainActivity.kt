@@ -20,14 +20,23 @@ class MainActivity : AppCompatActivity() {
         binding.person = Person("고라니", 16)
 
         nextActivity()
+        bindingActivity()
 
+    }
+
+    private fun bindingActivity() {
+        binding.btnBindingActivity.setOnClickListener {
+            val intent = Intent(this, BindingActivity::class.java)
+            startActivity(intent)
+            Toast.makeText(this, "Binding Activity 로 이동합니다.", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun nextActivity() {
         binding.btnNextActivity.setOnClickListener {
             val intent = Intent(this, NextActivity::class.java)
             startActivity(intent)
-            Toast.makeText(this, "다음 액티비티로 이동합니다.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Next Activity 로 이동합니다.", Toast.LENGTH_SHORT).show()
         }
     }
 
