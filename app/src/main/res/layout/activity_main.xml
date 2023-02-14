@@ -4,6 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="person"
+            type="com.gorani.jetpack_exercise.Person" />
+
+        <variable
+            name="activity"
+            type="com.gorani.jetpack_exercise.MainActivity" />
 
     </data>
 
@@ -16,11 +23,11 @@
             android:id="@+id/tv_dataBindingText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
             android:text="Hello!\nDataBinding Test"
             android:textColor="@color/black"
             android:textSize="40sp"
             android:textStyle="bold"
-            android:layout_marginTop="60dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -36,6 +43,52 @@
             app:layout_constraintEnd_toEndOf="@+id/tv_dataBindingText"
             app:layout_constraintStart_toStartOf="@+id/tv_dataBindingText"
             app:layout_constraintTop_toBottomOf="@+id/tv_dataBindingText" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="30dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_next_activity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{"이름 : " + person.name}'
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                tools:text="이름 : " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{"나이 : " + Integer.toString(person.age)}'
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                tools:text="나이 : " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                text="@{person.age > 19 ? `청년입니다.` : `청소년입니다.`}"
+                tools:text="20세 이상은 청년" />
+
+            <Button
+                android:onClick="@{() -> activity.plusAge()}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="당신의 이름과 나이는?" />
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
