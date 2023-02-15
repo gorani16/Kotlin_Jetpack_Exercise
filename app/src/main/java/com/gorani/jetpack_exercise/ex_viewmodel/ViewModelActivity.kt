@@ -27,7 +27,7 @@ class ViewModelActivity : AppCompatActivity() {
     private lateinit var binding: ActivityViewModelBinding
 
     private val viewModel: ActivityViewModel by lazy {
-        ViewModelProvider(this)[ActivityViewModel::class.java]
+        ViewModelProvider(this, viewModelFactory)[ActivityViewModel::class.java]
     }
 
     private lateinit var viewModelFactory: ViewModelFactory
