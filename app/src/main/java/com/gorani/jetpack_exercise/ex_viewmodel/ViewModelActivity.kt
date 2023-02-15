@@ -30,10 +30,13 @@ class ViewModelActivity : AppCompatActivity() {
         ViewModelProvider(this)[ActivityViewModel::class.java]
     }
 
+    private lateinit var viewModelFactory: ViewModelFactory
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_view_model)
 
+        viewModelFactory = ViewModelFactory(5000)
         binding.tvResult.text = viewModel.getCount().toString()
 
         clickPlus()
