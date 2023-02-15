@@ -6,16 +6,18 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".BindingActivity">
+        tools:context=".ex_viewmodel.ViewModelFragment">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv"
+        <TextView
+            android:id="@+id/tv_fragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/item_text" />
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
 </layout>

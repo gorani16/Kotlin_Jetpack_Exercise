@@ -6,11 +6,12 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.gorani.jetpack_exercise.databinding.ActivityMainBinding
+import com.gorani.jetpack_exercise.ex_viewmodel.ViewModelActivity
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private var ageCount = 16
+    private var ageCount = 15
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +22,16 @@ class MainActivity : AppCompatActivity() {
 
         nextActivity()
         bindingActivity()
+        viewModelActivity()
+
+    }
+
+    private fun viewModelActivity() {
+        binding.btnViewModelActivity.setOnClickListener {
+            val intent = Intent(this, ViewModelActivity::class.java)
+            startActivity(intent)
+            Toast.makeText(this, "ViewModel Activity 로 이동합니다.", Toast.LENGTH_SHORT).show()
+        }
 
     }
 
@@ -43,7 +54,7 @@ class MainActivity : AppCompatActivity() {
     fun plusAge() {
         Toast.makeText(this, "버튼 클릭!", Toast.LENGTH_SHORT).show()
         ageCount++
-        binding.person = Person("고라니", ageCount)
+        binding.person = Person("WaterDeer", ageCount)
     }
 
 }

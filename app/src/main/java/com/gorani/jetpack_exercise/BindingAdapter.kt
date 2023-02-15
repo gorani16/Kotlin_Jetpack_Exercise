@@ -25,4 +25,5 @@ class BindingAdapter(private val dataSet : ArrayList<String>) : RecyclerView.Ada
     override fun getItemCount(): Int {
         return dataSet.size
     }
+
 }

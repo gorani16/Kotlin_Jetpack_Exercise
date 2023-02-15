@@ -27,7 +27,7 @@
             android:layout_marginTop="60dp"
             android:text="Hello!\nDataBinding Test"
             android:textColor="@color/black"
-            android:textSize="40sp"
+            android:textSize="38sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,10 +39,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:text="GO Next Activity"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/tv_dataBindingText"
-            app:layout_constraintStart_toStartOf="@+id/tv_dataBindingText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_dataBindingText" />
 
         <Button
@@ -53,9 +53,21 @@
             android:text="GO Binding Activity"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/btn_next_activity"
-            app:layout_constraintStart_toStartOf="@+id/btn_next_activity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_next_activity" />
+
+        <Button
+            android:id="@+id/btn_view_model_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="GO ViewModel Activity"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_binding_activity" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -66,14 +78,14 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_binding_activity">
+            app:layout_constraintTop_toBottomOf="@+id/btn_view_model_activity">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text='@{"이름 : " + person.name}'
                 android:textColor="@color/black"
-                android:textSize="40sp"
+                android:textSize="30sp"
                 android:textStyle="bold"
                 tools:text="이름 : " />
 
@@ -82,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:text='@{"나이 : " + Integer.toString(person.age)}'
                 android:textColor="@color/black"
-                android:textSize="40sp"
+                android:textSize="30sp"
                 android:textStyle="bold"
                 tools:text="나이 : " />
 
