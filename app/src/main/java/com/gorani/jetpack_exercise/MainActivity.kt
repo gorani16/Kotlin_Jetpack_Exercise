@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.gorani.jetpack_exercise.databinding.ActivityMainBinding
+import com.gorani.jetpack_exercise.ex_lifecycleowner.LifeCycleOwnerActivity
 import com.gorani.jetpack_exercise.ex_livedata.LiveDataActivity
 import com.gorani.jetpack_exercise.ex_viewmodel.ViewModelActivity
 
@@ -25,7 +26,16 @@ class MainActivity : AppCompatActivity() {
         bindingActivity()
         viewModelActivity()
         liveDataActivity()
+        lifeCycleOwnerActivity()
 
+    }
+
+    private fun lifeCycleOwnerActivity() {
+        binding.btnLifeCycleOwnerActivity.setOnClickListener {
+            val intent = Intent(this, LifeCycleOwnerActivity::class.java)
+            startActivity(intent)
+            Toast.makeText(this, "LifeCycleOwner Activity 로 이동합니다.", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun liveDataActivity() {

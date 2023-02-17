@@ -9,6 +9,7 @@ import com.gorani.jetpack_exercise.databinding.ActivityLiveDataBinding
 
 /**
  * LiveData
+ * 이점)
  * - UI 와 데이터 상태의 일치 보장
  * - 메모리 누수 없음
  * - 중지된 액티비티로 인한 비정상 종료 없음
@@ -16,7 +17,9 @@ import com.gorani.jetpack_exercise.databinding.ActivityLiveDataBinding
  * - 최신 데이터 유지
  * - 적절한 구성 변경 : 기기 회전(rotate) 과 같은 구성 변경으로 인해 액티비티 또는 프래그먼트가 다시 생성되면 사용 가능한 최신 데이터를 즉시 받게 된다.
  * - 리소스 공유
- * => LifeCycle 과 결합해서 데이터를 관찰해주는 역할을 한다. : 데이터가 변하는걸 감지 + 관찰
+ *
+ * 역할)
+ * LifeCycle 과 결합해서 데이터를 관찰해주는 역할을 한다. : 데이터가 변하는걸 감지 + 관찰
  */
 
 class LiveDataActivity : AppCompatActivity() {

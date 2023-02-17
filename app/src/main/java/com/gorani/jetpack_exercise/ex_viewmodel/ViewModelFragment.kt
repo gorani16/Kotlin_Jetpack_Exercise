@@ -10,6 +10,10 @@ import androidx.fragment.app.activityViewModels
 import com.gorani.jetpack_exercise.R
 import com.gorani.jetpack_exercise.databinding.FragmentViewModelBinding
 
+/**
+ * Activity 의 ViewModel 의 데이터를 공유하여 Fragment 에 가져오기
+ */
+
 class ViewModelFragment : Fragment() {
 
     private lateinit var binding: FragmentViewModelBinding
