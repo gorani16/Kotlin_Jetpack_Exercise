@@ -31,11 +31,6 @@ class LifeCycleOwnerActivity : AppCompatActivity() {
             Toast.makeText(this, "변경 : fragment 2", Toast.LENGTH_SHORT).show()
         }
 
-        /**
-         * TODO
-         * 3. 프래그먼트 1 에 더하기 버튼 배치 -> LiveData 값 증가
-         */
-
     }
 
     private fun initTransaction(fragment: Fragment) {
