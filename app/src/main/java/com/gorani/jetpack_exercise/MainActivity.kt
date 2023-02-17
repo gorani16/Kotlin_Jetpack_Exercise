@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.gorani.jetpack_exercise.databinding.ActivityMainBinding
+import com.gorani.jetpack_exercise.ex_livedata.LiveDataActivity
 import com.gorani.jetpack_exercise.ex_viewmodel.ViewModelActivity
 
 class MainActivity : AppCompatActivity() {
@@ -23,7 +24,16 @@ class MainActivity : AppCompatActivity() {
         nextActivity()
         bindingActivity()
         viewModelActivity()
+        liveDataActivity()
 
+    }
+
+    private fun liveDataActivity() {
+        binding.btnLiveDataActivity.setOnClickListener {
+            val intent = Intent(this, LiveDataActivity::class.java)
+            startActivity(intent)
+            Toast.makeText(this, "LiveData Activity 로 이동합니다.", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun viewModelActivity() {
