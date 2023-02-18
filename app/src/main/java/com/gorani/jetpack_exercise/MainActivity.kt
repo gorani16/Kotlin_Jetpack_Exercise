@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import com.gorani.jetpack_exercise.databinding.ActivityMainBinding
 import com.gorani.jetpack_exercise.ex_lifecycleowner.LifeCycleOwnerActivity
 import com.gorani.jetpack_exercise.ex_livedata.LiveDataActivity
+import com.gorani.jetpack_exercise.ex_map_switchmap.MapActivity
 import com.gorani.jetpack_exercise.ex_viewmodel.ViewModelActivity
 
 class MainActivity : AppCompatActivity() {
@@ -27,7 +28,16 @@ class MainActivity : AppCompatActivity() {
         viewModelActivity()
         liveDataActivity()
         lifeCycleOwnerActivity()
+        mapActivity()
 
+    }
+
+    private fun mapActivity() {
+        binding.btnMapActivity.setOnClickListener {
+            val intent = Intent(this, MapActivity::class.java)
+            startActivity(intent)
+            Toast.makeText(this, "Map Activity 로 이동합니다.", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun lifeCycleOwnerActivity() {
