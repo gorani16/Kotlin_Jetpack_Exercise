@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.gorani.jetpack_exercise.ex_vmlvdtlfco.FruitActivity" />
+
+        <variable
+            name="vm"
+            type="com.gorani.jetpack_exercise.ex_vmlvdtlfco.FruitViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ex_vmlvdtlfco.FruitActivity">
+
+        <TextView
+            android:id="@+id/tv_fruit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@{vm.word.length() > 0 ? vm.word : `Fruit Word`}"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            tools:text="Fruit Word" />
+
+        <TextView
+            android:id="@+id/tv_result_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@{vm.shuffledWord.length() > 0 ? vm.shuffledWord : `Shuffled Word`}"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            tools:text="Shuffled Word"/>
+
+        <TextView
+            android:id="@+id/tv_result_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@{vm.newData.length() > 0 ? vm.newData : `Transformed Word`}"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            tools:text="Transformed Word" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="@{() -> activity.clickNextBtn()}"
+            android:text="NEXT"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</layout>

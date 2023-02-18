@@ -24,7 +24,7 @@
             android:id="@+id/linear_btn_list"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="5dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +34,7 @@
                 android:id="@+id/tv_dataBindingText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:text="Hello!\nJetpack Exercise !"
                 android:textColor="@color/black"
                 android:textSize="38sp"
@@ -44,7 +44,7 @@
                 android:id="@+id/btn_next_activity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="5dp"
                 android:text="GO Next Activity"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -53,7 +53,7 @@
                 android:id="@+id/btn_binding_activity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:text="GO Binding Activity"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -62,7 +62,7 @@
                 android:id="@+id/btn_view_model_activity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:text="GO ViewModel Activity"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -71,7 +71,7 @@
                 android:id="@+id/btn_live_data_activity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:text="GO LiveData Activity"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -80,7 +80,7 @@
                 android:id="@+id/btn_life_cycle_owner_activity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:text="GO LifeCycleOwner Activity"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -89,16 +89,16 @@
                 android:id="@+id/btn_map_activity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:text="GO Map Activity"
                 android:textSize="16sp" />
 
             <Button
-                android:id="@+id/btn_total_activity"
+                android:id="@+id/btn_fruit_activity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="GO Total Activity"
+                android:layout_marginTop="5dp"
+                android:text="GO Fruit Activity"
                 android:textSize="16sp" />
 
         </LinearLayout>
