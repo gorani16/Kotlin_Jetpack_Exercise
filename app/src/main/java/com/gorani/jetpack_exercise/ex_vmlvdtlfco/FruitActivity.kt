@@ -7,6 +7,11 @@ import androidx.lifecycle.ViewModelProvider
 import com.gorani.jetpack_exercise.R
 import com.gorani.jetpack_exercise.databinding.ActivityFruitBinding
 
+/**
+ * 종합 실습)
+ * DataBinding + ViewModel + LiveData + LifeCycleOwner + Transformations(switchMap)
+ */
+
 class FruitActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFruitBinding
 
