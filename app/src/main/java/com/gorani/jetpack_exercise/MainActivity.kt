@@ -34,6 +34,12 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun plusAge() {
+        Toast.makeText(this, "버튼 클릭!", Toast.LENGTH_SHORT).show()
+        ageCount++
+        binding.person = Person("WaterDeer", ageCount)
+    }
+
     private fun fruitActivity() {
         binding.btnFruitActivity.setOnClickListener {
             val intent = Intent(this, FruitActivity::class.java)
@@ -90,12 +96,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             Toast.makeText(this, "Next Activity 로 이동합니다.", Toast.LENGTH_SHORT).show()
         }
-    }
-
-    fun plusAge() {
-        Toast.makeText(this, "버튼 클릭!", Toast.LENGTH_SHORT).show()
-        ageCount++
-        binding.person = Person("WaterDeer", ageCount)
     }
 
 }
