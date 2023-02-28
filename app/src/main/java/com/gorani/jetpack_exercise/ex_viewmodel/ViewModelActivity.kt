@@ -14,6 +14,7 @@ import com.gorani.jetpack_exercise.databinding.ActivityViewModelBinding
  * - 상태(LifeCycle) 가 변경될 때 마다 데이터를 관리해줘야 하는데 이 관리가 편하다.
  * - UI 컨트롤러(Activity, Fragment) 에서 모든 로직을 관리하려고 하면 복잡해진다.
  *  그래서 ViewModel 을 사용하는 것이고 이것을 사용함으로써 테스트나 관리를 할 때 요긴하게 사용된다.
+ *  https://developer.android.com/topic/libraries/architecture/viewmodel?hl=ko
  *
  *  앱 실행 후 화면전환(Rotate)시 기존의 Activity 의 생명주기가 Destroy 까지 진행된 후 다시 Create 부터 실행됨. (View 가 새롭게 생성된 것임.)
  *  더하기 / 빼기 예제 : 화면을 돌리기 전 세팅했던 값들이 화면회전 이후에 사라지는 걸 확인할 수 있다.
