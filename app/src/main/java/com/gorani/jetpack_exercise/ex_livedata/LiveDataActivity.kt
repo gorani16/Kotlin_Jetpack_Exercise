@@ -20,6 +20,8 @@ import com.gorani.jetpack_exercise.databinding.ActivityLiveDataBinding
  *
  * 역할)
  * LifeCycle 과 결합해서 데이터를 관찰해주는 역할을 한다. : 데이터가 변하는걸 감지 + 관찰
+ *
+ * https://developer.android.com/topic/libraries/architecture/livedata?hl=ko
  */
 
 class LiveDataActivity : AppCompatActivity() {

@@ -22,7 +22,9 @@ class ActivityViewModel(private val num: Int) : ViewModel() {
      * 데이터를 처리하는 로직을 구현해야하는 경우는 아래와 같이 두 가지로 구분된다.
      * 1. 네트워크 통신을 할 때, 즉 서버로부터 데이터를 가져올 때 => Repository -> Retrofit
      * 2. Local DB 로 부터 데이터를 가져올 때 => Room, SQLite
+     *
      * 이 때, Repository 나 Local DB 로 부터 ViewModel 로 데이터를 전달해야할 때 ViewModel Factory 를 사용한다.
+     *
      * 참고 : https://developer.android.com/topic/libraries/architecture/viewmodel?hl=ko
      */
 
